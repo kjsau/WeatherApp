@@ -31,7 +31,8 @@
             </form>
           </div>
           <div class="col-6">
-            <span class="temperature" id="temperature">19</span
+            <h3 id="date"></h3>
+            <span class="temperature" id="temperature"></span
             ><span class="units">
               <a href="#" id="celsius-link">°C</a> |
               <a href="#" id="fahrenheit-link">°F</a>
@@ -40,54 +41,63 @@
           </div>
         </div>
         <hr />
-        <h2>
-          Current Weather in
-          <em
-            ><u> <h2 id="city"></h2> </u
-          ></em>
-        </h2>
-        <h3 id="date"></h3>
+        <div id="currentWeather">
+          <h2>
+            Today's weather in
+            <em
+              ><u> <span id="city"></span></u
+            ></em>
+            is
+          </h2>
+        </div>
         <h3 id="currentTemp"></h3>
+
         <br />
-        <h3><strong>Monday</strong></h3>
-        <div class="row">
-          <div class="col-6">
-            <h3>31℃ | 44℃</h3>
+        <h3><strong> The next five days </strong></h3>
+      </br>
+        <div weatherChart>
+          <div class="row">
+            <div class="col-3">
+              <h2 id="minOne">20</h2>
+            </div>
+            <div class="col-3">
+              <h2 id="maxOne">25</h2>
+            </div>
+            <div class="col-6">
+              <img id="sun" src="images/sun.png" width="80px" />
+            </div>
           </div>
-          <div class="col-6">
-            <img id="sun" src="images/sun.png" width="80px" />
+          <hr />
+          <h3><strong> Tuesday </strong></h3>
+          <div class="row">
+            <div class="col-6"><h3>32℃ | 43℃</h3></div>
+            <div class="col-6">
+              <img id="sun" src="images/sun.png" width="80px" />
+            </div>
           </div>
-        </div>
-        <hr />
-        <h3><strong> Tuesday </strong></h3>
-        <div class="row">
-          <div class="col-6"><h3>32℃ | 43℃</h3></div>
-          <div class="col-6">
-            <img id="sun" src="images/sun.png" width="80px" />
+          <hr />
+          <h3><strong>Wednesday</strong></h3>
+          <div class="row">
+            <div class="col-6"><h3>30℃ | 44℃</h3></div>
+            <div class="col-6">
+              <img id="sun" src="images/sun.png" width="80px" />
+            </div>
           </div>
-        </div>
-        <hr />
-        <h3><strong>Wednesday</strong></h3>
-        <div class="row">
-          <div class="col-6"><h3>30℃ | 44℃</h3></div>
-          <div class="col-6">
-            <img id="sun" src="images/sun.png" width="80px" />
+          <hr />
+          <h3><strong>Thursday </strong></h3>
+          <div class="row">
+            <div class="col-6"><h3>30℃ | 39℃</h3></div>
+            <div class="col-6">
+              <img id="sun" src="images/sun.png" width="80px" />
+            </div>
           </div>
-        </div>
-        <hr />
-        <h3><strong>Thursday </strong></h3>
-        <div class="row">
-          <div class="col-6"><h3>30℃ | 39℃</h3></div>
-          <div class="col-6">
-            <img id="sun" src="images/sun.png" width="80px" />
-          </div>
-        </div>
-        <hr />
-        <h3><strong> Friday</strong></h3>
-        <div class="row">
-          <div class="col-6"><h3>30℃ | 42℃</h3></div>
-          <div class="col-6">
-            <img id="sun" src="images/sun.png" width="80px" />
+          <hr />
+          <h3><strong> Friday</strong></h3>
+          <div class="row">
+            <div class="col-6"><h3>30℃ | 42℃</h3></div>
+            <div class="col-6">
+              <img id="sun" src="images/sun.png" width="80px" />
+            </div>
           </div>
         </div>
       </div>

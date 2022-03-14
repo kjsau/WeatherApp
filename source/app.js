@@ -14,8 +14,18 @@ function handleSubmit(event) {
 }
 
 function showTemperature(response) {
+  console.log(response.data);
   let temperatureElement = document.querySelector("#currentTemp");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = response.data.wind.speed;
+  let weatherElement = document.querySelector("#weatherDescription");
+  weatherElement.innerHTML = response.data.weather[0].description;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function convertToFahrenheit(event) {

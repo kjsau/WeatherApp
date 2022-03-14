@@ -22,6 +22,8 @@ function showTemperature(response) {
   let weatherElement = document.querySelector("#weatherDescription");
   weatherElement.innerHTML = response.data.weather[0].description;
   let iconElement = document.querySelector("#icon");
+  celsiusTemperature = response.data.main.temp;
+
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -30,12 +32,21 @@ function showTemperature(response) {
 
 function convertToFahrenheit(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
+  let temperatureElement = document.querySelector("#currentTemp");
+  let farenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  temperatureElement.innerHTML = Math.round(farenheitTemperature);
 }
 function convertToCelsius(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#currentTemp");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
+
+let celsiusTemperature = null;
 
 let now = new Date();
 let h2 = document.querySelector("#date");

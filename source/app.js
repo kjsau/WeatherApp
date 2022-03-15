@@ -90,24 +90,6 @@ function showTemperature(response) {
   getForecast(response.data.coord);
 }
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#currentTemp");
-  let farenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  temperatureElement.innerHTML = Math.round(farenheitTemperature);
-}
-function convertToCelsius(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#currentTemp");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
 let now = new Date();
 let h2 = document.querySelector("#date");
 let date = now.getDate();
@@ -152,12 +134,6 @@ h2.innerHTML = `${day} ${hours}:${minutes}`;
 
 let form = document.querySelector("#citySearch");
 form.addEventListener("submit", handleSubmit);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
 
 function showPosition(position) {
   let lat = position.coords.latitude;

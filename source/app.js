@@ -33,7 +33,7 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = "";
   forecast.forEach(function (forecastDay, index) {
-    if (index < 3) {
+    if (index > 0 && index < 4) {
       forecastHTML =
         forecastHTML +
         `   <div class="todayWeather">
@@ -47,7 +47,7 @@ function displayForecast(response) {
                 }@2x.png"/>
               </div>
               <div class="col-2">
-                <h3>${Math.round(forecastDay.temp.max)}</h3>
+                <h3>${Math.round(forecastDay.temp.max)}°C</h3>
               </div>
               <div class="col-4">
                 <h3>${forecastDay.weather[0].main}</h3>

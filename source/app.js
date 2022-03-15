@@ -13,6 +13,38 @@ function handleSubmit(event) {
   search(city);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = "";
+  let days = ["Thur", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `   <div class="todayWeather">
+            <div class="row">
+              <div class="col-3">
+                <h3>${day}</h3>
+              </div>
+              <div class="col-3">
+                <img id="sun" src="images/sun.png" width="60px" />
+              </div>
+              <div class="col-2">
+                <h3 id="currentTemp"></h3>
+              </div>
+              <div class="col-4">
+                <h3>weather description</h3>
+                </div>
+                </div>
+                </div>
+                <br/>
+  
+  `;
+  });
+
+  forecastHTML = forecastHTML;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showTemperature(response) {
   console.log(response.data);
   let temperatureElement = document.querySelector("#currentTemp");
@@ -98,6 +130,8 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
+
+displayForecast();
 
 function showPosition(position) {
   let lat = position.coords.latitude;

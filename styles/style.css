@@ -1,7 +1,9 @@
 h1,
 h2,
 h3,
-.author {
+.date,
+.author,
+li {
   color: #016ea5;
   text-align: center;
   text-transform: capitalize;
@@ -11,8 +13,7 @@ form {
 }
 .layout {
   max-width: 700px;
-  margin: 5px 3px;
-  padding: 40px;
+  padding: 19px;
   border-radius: 25px;
   background-image: url("../images/bubbles.jpg");
 }
@@ -22,8 +23,6 @@ body {
   max-width: 42em;
   padding: 2em;
   margin: 0 auto;
-  color: #161616;
-  background-color: currentColor;
   font-family: monospace;
 }
 
@@ -76,7 +75,7 @@ body {
   width: 300px;
   border-radius: 20px;
   background-color: #027bb2;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid #027bb2;
   transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
 }
 .input-search:focus {
@@ -89,8 +88,8 @@ body {
 
 h1 {
   font-weight: 100;
-  font-size: 42px;
-  text-transform: uppercase;
+  font-size: 30px;
+  padding-top: 20px;
 }
 h2 {
   font-size: 25px;
@@ -104,13 +103,24 @@ h3 {
 hr {
   background-color: white;
 }
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  padding: 10px;
+  font-size: 25px;
+}
+
 .temperature {
   color: white;
   font-size: 20px;
 }
 .todayWeather {
   background-color: transparent;
-  border: 2px solid #00b8ec;
   padding: 30px;
   border-radius: 25px;
 }

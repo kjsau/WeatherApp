@@ -21,7 +21,7 @@ function formatDay(timestamp) {
     "Monday",
     "Tuesday",
     "Wednesday",
-    "Thurday",
+    "Thursday",
     "Friday",
     "Saturday",
   ];
@@ -39,23 +39,25 @@ function displayForecast(response) {
         `   <div class="todayWeather">
             <div class="row">
               <div class="col-3">
+              <br/>
                 <h3>${formatDay(forecastDay.dt)}</h3>
               </div>
               <div class="col-3">
-                <img src= "http://openweathermap.org/img/wn/${
-                  forecastDay.weather[0].icon
-                }@2x.png"/>
+                              <img src= "http://openweathermap.org/img/wn/${
+                                forecastDay.weather[0].icon
+                              }@2x.png"/>
               </div>
               <div class="col-2">
+              <br/>
                 <h3>${Math.round(forecastDay.temp.max)}°C</h3>
               </div>
               <div class="col-4">
+              <br/>
                 <h3>${forecastDay.weather[0].main}</h3>
                 </div>
                 </div>
                 </div>
-                <br/>
-  
+                  
   `;
     }
   });
@@ -74,11 +76,11 @@ function getForecast(coordinates) {
 function showTemperature(response) {
   console.log(response.data);
   let temperatureElement = document.querySelector("#currentTemp");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  temperatureElement.innerHTML = Math.round(response.data.main.temp) + "°C";
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = response.data.wind.speed;
   let weatherElement = document.querySelector("#weatherDescription");
-  weatherElement.innerHTML = response.data.weather[0].description;
+  weatherElement.innerHTML = response.data.weather[0].main;
   let iconElement = document.querySelector("#icon");
   celsiusTemperature = response.data.main.temp;
 
@@ -108,7 +110,7 @@ let days = [
   "Monday",
   "Tuesday",
   "Wednesday",
-  "Thurday",
+  "Thursday",
   "Friday",
   "Saturday",
 ];
@@ -128,9 +130,9 @@ let months = [
   "November",
   "December",
 ];
-let month = [now.getMonth()];
+let month = months[now.getMonth()];
 
-h2.innerHTML = `${day} ${hours}:${minutes}`;
+h2.innerHTML = `${day}`;
 
 let form = document.querySelector("#citySearch");
 form.addEventListener("submit", handleSubmit);

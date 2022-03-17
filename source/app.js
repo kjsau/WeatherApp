@@ -54,9 +54,7 @@ function displayForecast(response) {
       </div>
     </div>
     </div>
-    
-
-                    `;
+                        `;
     }
   });
 
@@ -72,14 +70,16 @@ function getForecast(coordinates) {
 
 function showTemperature(response) {
   let temperatureElement = document.querySelector("#currentTemp");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp) + "°C";
   let windElement = document.querySelector("#wind");
-  windElement.innerHTML = response.data.wind.speed + "kmph";
   let weatherElement = document.querySelector("#weatherDescription");
-  weatherElement.innerHTML = response.data.weather[0].main;
   let iconElement = document.querySelector("#icon");
-  celsiusTemperature = response.data.main.temp;
   let humidityElement = document.querySelector("#humidity");
+
+  temperatureElement.innerHTML = Math.round(response.data.main.temp) + "°C";
+  windElement.innerHTML = response.data.wind.speed + "kmph";
+  weatherElement.innerHTML = response.data.weather[0].main;
+  celsiusTemperature = response.data.main.temp;
+  celsiusTemperature = response.data.main.temp;
   humidityElement.innerHTML = response.data.main.humidity;
 
   iconElement.setAttribute(

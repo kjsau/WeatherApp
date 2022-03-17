@@ -133,3 +133,47 @@ li {
 .weather-temperature .active:hover {
   text-decoration: none;
 }
+
+body {
+  font-family: monospace;
+}
+
+.card {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #027bb2;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 5px;
+}
+
+.card-header {
+  color: #027bb2;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: #fff;
+  background-color: white;
+  padding: 5px 10px;
+}
+
+.card-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.material-icons {
+  font-size: 36px;
+  color: #d32f2f;
+  margin-bottom: 5px;
+}
+
+.main-description {
+  color: #d32f2f;
+  font-size: 12px;
+  text-align: center;
+}

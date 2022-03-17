@@ -79,6 +79,8 @@ function showTemperature(response) {
   weatherElement.innerHTML = response.data.weather[0].main;
   let iconElement = document.querySelector("#icon");
   celsiusTemperature = response.data.main.temp;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.main.humidity;
 
   iconElement.setAttribute(
     "src",
@@ -128,7 +130,7 @@ let months = [
 ];
 let month = months[now.getMonth()];
 
-h2.innerHTML = `${day}`;
+h2.innerHTML = `${day} ${month} ${date}`;
 
 let form = document.querySelector("#citySearch");
 form.addEventListener("submit", handleSubmit);

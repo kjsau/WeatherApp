@@ -105,10 +105,8 @@ hr {
 }
 ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  text-align: center;
 }
-
 li {
   display: inline-block;
   padding: 10px;
@@ -139,13 +137,13 @@ body {
 }
 
 .cardMain {
-  width: 400px;
+  width: 350px;
   display: inline-block;
   flex-direction: column;
   border: 1px solid #027bb2;
   border-radius: 20px;
   overflow: hidden;
-  margin: 5px;
+  margin: 3px;
   box-shadow: 5px 8px 5px black;
 }
 

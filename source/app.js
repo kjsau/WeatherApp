@@ -76,7 +76,7 @@ function showTemperature(response) {
   let temperatureElement = document.querySelector("#currentTemp");
   temperatureElement.innerHTML = Math.round(response.data.main.temp) + "°C";
   let windElement = document.querySelector("#wind");
-  windElement.innerHTML = `${response.data.wind.speed}km/h`;
+  windElement.innerHTML = response.data.wind.speed + "kmph";
   let weatherElement = document.querySelector("#weatherDescription");
   weatherElement.innerHTML = response.data.weather[0].main;
   let iconElement = document.querySelector("#icon");
